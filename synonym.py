@@ -1,5 +1,5 @@
 
-import urllib.request, ssl, os
+import urllib.request, ssl, os, sys
 from bs4 import BeautifulSoup
 
 headers = {'User-Agent': 'URL-PYTHON-EXAMPLE'}
@@ -41,11 +41,11 @@ debugFlag = False  # setting to True will cause
 #        f.close()
 
 
-def getSynonym(*args):
-    for word in args:
+def getSynonym(argsList):
+    for word in argsList:
         try:
             if debugFlag:
-                f = open(r'D:\Documents\School\Programming Design - EEL4835\Final Project\testWord2.txt', 'r', encoding="utf-8")
+                f = open('testWord2.txt', 'r', encoding="utf-8")
                 content = f.read()
             else:
                 url = f'https://www.thesaurus.com/browse/{word}'
@@ -61,9 +61,9 @@ def getSynonym(*args):
         except urllib.error.HTTPError:
             print(f'No synonyms could be found for {word}.')
         except Exception as e: print(e)
-        if len(args) > 1:
+        if len(argsList) > 1:
             print("\n")
 
 
 #myThes = Thesaurus()
-getSynonym('gibbbbbbberish', 'hello', 'world')
+getSynonym(sys.argv[1:])
