@@ -8,7 +8,7 @@ Didn't finish implementing class to store and update words in an offline thesaur
 # Usage Examples:
 
 ## Command:
-`synonyms test hello world`
+`python3 -m synonyms test hello world`
 ## Response:
 ```test:
 analysis, approval, assessment, attempt, check, evaluation, experiment, final, inquiry, inspection, investigation, search, standard, trial, catechism, comp, confirmation, corroboration, countdown, criterion, elimination, essay, exam, fling, go, inquest, lick, oral, ordeal, preliminary, probation, probing, proof, questionnaire, scrutiny, shibboleth, substantiation, touchstone, try, tryout, verification, yardstick, blue book, dry run, pop quiz, trial and error, trial run
